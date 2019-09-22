@@ -1,8 +1,89 @@
-#clockbox {
-	position: absolute;
-	float: right;
+body {
+	font-family: verdana;
 }
 
-#button {
-	float: right;
+#clockbox {
+	position: absolute;
+	width: 100px
+	height: 100px;
+	background-color: gray;
+	}
+
+#clock {
+	position: absolute;
+	display: block;
+	margin-left: 300px;
+	margin-top: 15px;
+	width: 500px;
+	height: 500px;
+	background-color: #efefef;
+	border-radius: 50%;
+}
+
+#h12 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+
+#h3 {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+
+#h6 {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+
+#h9 {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+
+#hourHand {
+	background-color: gray;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 4px;
+	height: 175px;
+	z-index: 2;
+	transform-origin: top;
+	transform: skewX(0deg);
+}
+
+#minuteHand {
+	background-color: red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3px;
+	height: 175px;
+	z-index: 2;
+	transform-origin: top;
+	transform: skewX(0deg);
+}
+
+#secondHand {
+	background-color: blue;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1.5px;
+	height: 200px;
+	z-index: 4;
+	transform-origin: top;
+	transform: skewX(0deg);
 }
