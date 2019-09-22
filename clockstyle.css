@@ -86,4 +86,8 @@ body {
 	z-index: 4;
 	transform-origin: top;
 	transform: skewX(0deg);
+	transition: transform 1s;
+	animation-fill-mode: both;
+	transition-timing-function: linear;
+
 }
