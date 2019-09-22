@@ -73,9 +73,10 @@ body {
 	height: 175px;
 	z-index: 2;
 	transform-origin: top;
-	transform: skewX(0deg);
+	transform: rotate(0deg);
 }
 
+/* FYI I did most of the advanced CSS section yesterday hence the below NH */
 #secondHand {
 	background-color: blue;
 	position: absolute;
@@ -85,9 +86,7 @@ body {
 	height: 200px;
 	z-index: 4;
 	transform-origin: top;
-	transform: skewX(0deg);
+	transform: rotate(0deg);
 	transition: transform 1s;
-	animation-fill-mode: both;
-	transition-timing-function: linear;
-
-}
+	animation-timing-function: linear;
+	}
