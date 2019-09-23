@@ -2,7 +2,6 @@ var t = new Date();
 var h = t.getHours().toString();
 var m = t.getMinutes().toString();
 var s = t.getSeconds().toString();
-var i = s * 6;
 
 function timeNow() {
 	setTimeout(timeNow, 1000);
@@ -14,7 +13,6 @@ function timeNow() {
 	startHour();
 	startMinute();
 	startSecond();
-	secs();
 }
 
 function startHour() {
@@ -36,21 +34,14 @@ function startMinute() {
 	document.getElementById("minuteHand").style.transform = mDegInsert;
 }
 
-// I started trying things hence new variables and secs function. Ended up being more confused 
-// Used CSS to do this unlike with minute and hour hands NH
+// I don't know NH
 function startSecond() {
-	sDeg2 = i + 180;
 	sDeg = ((360 / 60) * s) + 180;
 	sDegInsert = "rotate(" + sDeg + "deg)";
 	document.getElementById("secondHand").style.transform = sDegInsert;
 	console.log(s);
 	console.log(sDeg);
 	console.log(sDegInsert);
-}
-
-function secs() {
-	setTimeout(secs, 1000);
-	i = i + 6; 
 }
 
 /*
