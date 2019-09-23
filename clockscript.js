@@ -2,6 +2,7 @@ var t = new Date();
 var h = t.getHours().toString();
 var m = t.getMinutes().toString();
 var s = t.getSeconds().toString();
+var i = s;
 
 function timeNow() {
 	setTimeout(timeNow, 1000);
@@ -13,6 +14,7 @@ function timeNow() {
 	startHour();
 	startMinute();
 	startSecond();
+	plusSix();
 }
 
 function startHour() {
@@ -34,14 +36,17 @@ function startMinute() {
 	document.getElementById("minuteHand").style.transform = mDegInsert;
 }
 
-// I don't know NH
 function startSecond() {
-	sDeg = ((360 / 60) * s) + 180;
+	sDeg = (i * 6) + 180;
 	sDegInsert = "rotate(" + sDeg + "deg)";
 	document.getElementById("secondHand").style.transform = sDegInsert;
 	console.log(s);
 	console.log(sDeg);
 	console.log(sDegInsert);
+}
+
+function plusSix() {
+	i++;
 }
 
 /*
