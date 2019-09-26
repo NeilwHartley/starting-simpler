@@ -16,9 +16,7 @@ function timeNow() {
 	startMinute();
 	startSecond();
 	plusSix();
-	if (hNum >= 12) {
-		nighttime();
-	}
+	nighttime();
 }
 
 function startHour() {
