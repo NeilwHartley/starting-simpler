@@ -1,5 +1,6 @@
 var t = new Date();
 var h = t.getHours().toString();
+var hNum = t.getHours();
 var m = t.getMinutes().toString();
 var s = t.getSeconds().toString();
 var i = s;
@@ -15,6 +16,9 @@ function timeNow() {
 	startMinute();
 	startSecond();
 	plusSix();
+	if (hNum >= 12) {
+		nighttime();
+	}
 }
 
 function startHour() {
@@ -47,6 +51,13 @@ function startSecond() {
 
 function plusSix() {
 	i++;
+}
+
+function nighttime() {
+	if (hNum >= 18 || hNum < 6) {
+		var bgColor = document.getElementsByTagName("body")[0];
+		bgColor.style.backgroundColor = "black";
+	}
 }
 
 /*
