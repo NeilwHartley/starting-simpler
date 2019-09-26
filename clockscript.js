@@ -5,6 +5,35 @@ var m = t.getMinutes().toString();
 var s = t.getSeconds().toString();
 var i = s;
 
+document.onvisibilitychange = function (e) {
+	if (document.hidden) {
+		navigateAway();
+	} else {
+		navigateBack();
+	}
+}
+
+function navigateAway () {
+
+	console.log("Navigate away");
+}
+
+function navigateBack () {
+	
+	console.log("Navigate back");
+}
+
+function stopSmoothAnimation () {
+	
+	var secondHand = document.getElementById("secondHand");
+	secondHand.style.transition = "none";
+}
+
+function restoreSmoothAnimation () {
+
+	var secondHand = document.getElementById("secondHand");
+	secondHand.style.transition = "transform 1s";
+}
 
 function timeNow() {
 	setTimeout(timeNow, 1000);
@@ -43,9 +72,9 @@ function startSecond() {
 	sDeg = (i * 6) + 180;
 	sDegInsert = "rotate(" + sDeg + "deg)";
 	document.getElementById("secondHand").style.transform = sDegInsert;
-	console.log(s);
-	console.log(sDeg);
-	console.log(sDegInsert);
+	// console.log(s);
+	// console.log(sDeg);
+	// console.log(sDegInsert);
 }
 
 function plusSix() {
