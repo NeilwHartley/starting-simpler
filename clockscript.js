@@ -5,6 +5,7 @@ var m = t.getMinutes().toString();
 var s = t.getSeconds().toString();
 var i = s;
 
+
 function timeNow() {
 	setTimeout(timeNow, 1000);
 	document.getElementById("time").innerHTML = h + " : " + m + " : " + s;
@@ -52,9 +53,11 @@ function plusSix() {
 }
 
 function nighttime() {
+	var bgColor = document.getElementsByTagName("body")[0];
 	if (hNum >= 18 || hNum < 6) {
-		var bgColor = document.getElementsByTagName("body")[0];
-		bgColor.style.backgroundColor = "black";
+		bgColor.style.backgroundColor = "black"; 
+ 	} else { 
+ 		bgColor.style.backgroundColor = "lightblue";
 	}
 }
 
