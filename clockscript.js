@@ -6,33 +6,13 @@ var s = t.getSeconds().toString();
 var i = s;
 
 document.onvisibilitychange = function (e) {
-	if (document.hidden) {
-		navigateAway();
-	} else {
-		navigateBack();
-	}
-}
 
-function navigateAway () {
-
-	console.log("Navigate away");
-}
-
-function navigateBack () {
-	
-	console.log("Navigate back");
-}
-
-function stopSmoothAnimation () {
-	
-	var secondHand = document.getElementById("secondHand");
-	secondHand.style.transition = "none";
-}
-
-function restoreSmoothAnimation () {
-
-	var secondHand = document.getElementById("secondHand");
-	secondHand.style.transition = "transform 1s";
+	console.log(e);
+	// if (document.hidden) {
+	// 	navigateAway();
+	// } else {
+	// 	navigateBack();
+	// }
 }
 
 function timeNow() {
@@ -40,6 +20,7 @@ function timeNow() {
 	document.getElementById("time").innerHTML = h + " : " + m + " : " + s;
 	t = new Date ();
 	h = t.getHours().toString();
+	hNum = t.getHours();
 	m = t.getMinutes().toString();
 	s = t.getSeconds().toString();
 	startHour();
@@ -72,9 +53,18 @@ function startSecond() {
 	sDeg = (i * 6) + 180;
 	sDegInsert = "rotate(" + sDeg + "deg)";
 	document.getElementById("secondHand").style.transform = sDegInsert;
+
 	// console.log(s);
 	// console.log(sDeg);
 	// console.log(sDegInsert);
+}
+
+function delay() {
+	setTimeout(secondHandTransition, 1000);
+}
+
+function secondHandTransition() {
+	document.getElementById("secondHand").style.transition = "transform 1s";
 }
 
 function plusSix() {
@@ -82,12 +72,16 @@ function plusSix() {
 }
 
 function nighttime() {
-	var bgColor = document.getElementsByTagName("body")[0];
+	var bgColor = document.body;
 	if (hNum >= 18 || hNum < 6) {
 		bgColor.style.backgroundColor = "black"; 
  	} else { 
  		bgColor.style.backgroundColor = "lightblue";
 	}
+}
+
+function test() {
+	console.log("hi");
 }
 
 /*

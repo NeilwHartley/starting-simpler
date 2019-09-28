@@ -2,10 +2,10 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="clockstyle.css" />
-	<script src="clockscript.js">
-	</script>
+	<script src="clockscript.js"></script>
+	<script src="clockclass.js"></script>
 </head>
-<body onload="timeNow()">
+<body onload="timeNow(), delay()" onvisibilitychange="test()">
 <div id="clockbox">
 	<p id="button">The time is: </p>
 <p id="time"></p>

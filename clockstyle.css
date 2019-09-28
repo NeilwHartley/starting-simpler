@@ -62,7 +62,7 @@ body {
 	height: 175px;
 	z-index: 2;
 	transform-origin: top;
-	transform: skewX(0deg);
+	transform: rotate(0deg);
 }
 
 #minuteHand {
@@ -88,6 +88,6 @@ body {
 	z-index: 4;
 	transform-origin: top;
 	transform: rotate(0deg);
-	transition: transform 1s;
+	transition: transform 0s;
 	animation-timing-function: linear;
 	}
