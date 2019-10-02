@@ -1,6 +1,8 @@
 1. At the moment we can only set the timestamp of the clock when we create a Clock object using the new keyword. Rework the Clock class to provide a way to set the timestamp of the clock directly after the Clock object has been created.
 
+2. Add another js file to include some tests for the Clock that you will be developing. Automated tests alert you when a change that you make has broken intended functionality. This is extremely useful - and paramount for larger systems. The test can just consist of a single function to start with to create a Clock with a particular timestamp, interact with the clock using its methods and test that the clocks state has changed to what we expect it to, if it has you could print something to the console to tell you, or a warning to suggest that something has been broken.
 
+3. As the Clock object js file's purpose is to declare a class 'Clock' the naming convention of the file should be the name of the class capitalised ie : "Clock.js" the test file specifically for the class should then be the same name followed by "Test" ie : "ClockTest.js" - rename the files and test that theyre working.
 
 
 
