@@ -4,6 +4,17 @@
 
 3. As the Clock object js file's purpose is to declare a class 'Clock' the naming convention of the file should be the name of the class capitalised ie : "Clock.js" the test file specifically for the class should then be the same name followed by "Test" ie : "ClockTest.js" - rename the files and test that theyre working.
 
+4. It will be very useful to transform the timestamp that we store on the clock object instance, back into a Date class utility, research how to do this, and implement a method on the class to return a Date object from its timestamp.
+
+5. Add a test for the new method created in step 4.
+
+6. Add a method that returns the number in degrees for the rotation of the second hand around a 12 hour clock given the internal timestamp.
+
+7. Add a test for the new method created in step 5.
+
+8. Add methods for the minuites and hours similar to that created for the seconds in step 6, and add tests for them.
+
+
 
 
 
