@@ -1,0 +1,7 @@
+1. At the moment we can only set the timestamp of the clock when we create a Clock object using the new keyword. Rework the Clock class to provide a way to set the timestamp of the clock directly after the Clock object has been created.
+
+
+
+
+
+
