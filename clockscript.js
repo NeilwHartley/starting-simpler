@@ -80,9 +80,6 @@ function nighttime() {
 	}
 }
 
-function test() {
-	console.log("hi");
-}
 
 /*
 	Semi colons for the function definitions.

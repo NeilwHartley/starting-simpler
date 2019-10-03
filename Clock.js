@@ -1,3 +1,6 @@
+
+// I don't understand anything
+
 class Clock {
 
 
@@ -15,7 +18,8 @@ class Clock {
 
 }
 
-Clock.prototype.timestamp = null;
+// This doesn't seem to do anything?
+// Clock.prototype.timestamp = null;
 
 window.myClock3 = new Clock();
 
