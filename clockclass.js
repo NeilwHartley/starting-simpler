@@ -4,7 +4,7 @@ class Clock {
 
 	constructor (timestamp) {
 
-		this.timestamp = timestamp;
+		this.timestamp = new Date();
 	}
 
 	tick () {
@@ -17,6 +17,6 @@ class Clock {
 
 Clock.prototype.timestamp = null;
 
-window.myClock = new Clock(123456789);
-window.myClock2 = new Clock(5678765);
 window.myClock3 = new Clock();
+
+console.log(myClock3);
